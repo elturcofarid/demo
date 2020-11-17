@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk8:alpine-slim
+WORKDIR /fileftp
+EXPOSE 80
+ADD ./target/demo-0.0.1-SNAPSHOT.jar servicio-redi.jar
+ENTRYPOINT ["java","-jar","/fileftp/servicio-redi.jar"]
